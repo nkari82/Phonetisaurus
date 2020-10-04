@@ -136,10 +136,10 @@ timespec get_time( ){
   return ts;
 }
 #else
-timespec get_time( ){
-  timespec ts;
-  clock_gettime(CLOCK_REALTIME, &ts);
-  return ts;
+timespec get_time() {
+    timespec ts;
+    timespec_get(&ts, TIME_UTC);
+    return ts;
 }
 #endif
 

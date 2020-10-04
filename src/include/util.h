@@ -37,6 +37,8 @@
 #ifdef __MACH__
 #include <mach/clock.h>
 #include <mach/mach.h>
+#else
+#include <ctime>
 #endif
 using namespace fst;
 
